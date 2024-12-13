@@ -9,7 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
-  {path:'', component: MainComponent},
+  {path:'', component: CameraComponent},
   {path:'home', component: MainComponent},
   {path:'camera', component: CameraComponent},
   { path: 'table', component: TableComponent },
