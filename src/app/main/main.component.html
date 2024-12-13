@@ -1,0 +1,50 @@
+
+<!-- <main>
+    <section class="hero">
+        <h1>Welcome to Our Website!</h1>
+        <p>This is a sample cloned homepage.</p>
+    </section>
+    <section class="content">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services to help you grow your business.</p>
+    </section>
+</main> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <button (click)="form()" routerLinkActive="active" 
+routerLink="/form">form</button> -->
+<!-- Hero Section -->
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero" data-aos="fade-up" data-aos-duration="1500">
+    <div class="hero-content">
+      <h1>{{ name }}</h1>
+      <h2>{{ role }}</h2>
+      <p>{{ intro }}</p>
+      <button class="cta-btn" [@buttonHover]="buttonState" (mouseover)="onButtonHover()" (mouseleave)="onButtonHover()" data-aos="zoom-in" data-aos-duration="1500">Get in Touch</button>
+    </div>
+  </section>
+  
+  
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div *ngFor="let skill of skills" class="skill-card" data-aos="flip-left" data-aos-duration="1500">
+        <h3>{{ skill }}</h3>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div *ngFor="let project of projects" class="project-card" data-aos="flip-right" data-aos-duration="1500">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <a [href]="project.link" target="_blank" class="view-btn">View Project</a>
+      </div>
+    </div>
+  </section>
+  
+  

@@ -1,0 +1,24 @@
+<div>
+    <table style="border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>email</th>
+                <th>Cemail</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+            <tbody *ngFor="let item of tableData;let i=index" >
+                <tr>
+                    <td>{{item?.fName}}</td>
+                    <td>{{item?.LName}}</td>
+                    <td>{{item?.email}}</td>
+                    <td>{{item?.cEmail}}</td>
+                    <td><button (click)="delete(i)">Delete</button></td>
+                    <td><button (click)="edit(i,item)">Edit</button></td>
+                </tr>
+            </tbody>
+    </table>
+</div>

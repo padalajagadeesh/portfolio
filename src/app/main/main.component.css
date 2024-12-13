@@ -1,0 +1,157 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+  }
+  
+  h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: url('https://bs-uploads.toptal.io/blackfish-uploads/components/open_graph_image/8960063/og_image/optimized/top-18-most-common-angularjs-developer-mistakes-41f9ad303a51db70e4a5204e101e7414.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+  
+  .cta-btn {
+    padding: 15px 30px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #3f51b5;
+  }
+  
+  /* Skills Section */
+  #skills {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #skills h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    background-color: #444;
+    padding: 40px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.6em;
+    color: #fff;
+  }
+  
+  /* Projects Section */
+  #projects {
+    padding: 60px 20px;
+    background-color: #555;
+    text-align: center;
+  }
+  
+  #projects h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  
+  .project-card {
+    background-color: #444;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .project-card p {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  .view-btn {
+    padding: 12px 25px;
+    background-color: #5c6bc0;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-btn:hover {
+    background-color: #3f51b5;
+  }
+  

@@ -1,0 +1,52 @@
+<div class="minaParent">
+  <!-- (ngSubmit)="formSubmit()" -->
+  <form [formGroup]="userForm" >
+    <label> firstName </label>
+    <input type="text" formControlName="fName" (keyup)="name()" />
+    <div
+      *ngIf="userForm.get('fName')?.touched && userForm.get('fName')?.invalid"
+    >
+      enter the firstName
+    </div>
+    <label> lastName </label>
+    <input type="text" formControlName="LName" />
+    <div
+      *ngIf="userForm.get('LName')?.touched && userForm.get('LName')?.invalid"
+    >
+      enter the lastName
+    </div>
+    <label> Email </label>
+    <input type="text" formControlName="email" />
+    <div
+      *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid"
+    >
+      enter the Email
+    </div>
+    <label> ConformEmail </label>
+    <input type="text" formControlName="cEmail" />
+    <div
+      *ngIf="userForm.get('cEmail')?.touched && userForm.get('cEmail')?.invalid"
+    >
+      enter the ConformEmail
+    </div>
+  </form>
+  <button *ngIf="!getData?.flag" (click)="formSubmit()">Submit</button>
+  <button  *ngIf="getData?.flag" (click)="update()">Update</button>
+</div>
+<!-- <div>
+  <form [formGroup]="userForm2">
+    <label> firstName </label>
+    <input type="text" formControlName="ufName" /> -->
+    <!-- <div *ngIf="userForm.get('fName')?.touched && userForm.get('fName')?.invalid">enter the firstName</div> -->
+    <!-- <label> lastName </label>
+    <input type="text" formControlName="uLName" /> -->
+    <!-- <div *ngIf="userForm.get('LName')?.touched && userForm.get('LName')?.invalid">enter the lastName</div> -->
+    <!-- <div formArrayName="items">
+      <div *ngFor="let hobby of hobbies.controls; let i = index">
+        <input [formControlName]="i" placeholder="Enter hobby" />
+        <button type="button" (click)="removeHobby(i)">Remove</button>
+      </div>
+    </div>
+    <button type="button" (click)="addHobby()">Add Hobby</button>
+  </form>
+</div> -->

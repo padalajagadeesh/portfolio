@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-angular';
+
+  ngOnInit(){
+    let z = 3;
+let x = z++;
+console.log(x);
+console.log(z); 
+
+  }
+  // form(){
+    
+  // }
 }
