@@ -55,11 +55,11 @@ export class CameraComponent implements OnInit, OnDestroy {
   }
   capturedImages: string[] = [];
   ngOnInit(): void {
-    this.intervalId = setInterval(() => {
+    // this.intervalId = setInterval(() => {
     this.startCamera();
     console.log('pageload')
     this.capturedImages = JSON.parse(localStorage.getItem('capturedImages') || '[]');
-  }, 5000);
+  // }, 5000);
   }
 
   ngOnDestroy(): void {
