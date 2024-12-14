@@ -1,5 +1,14 @@
-<p>camera works!</p>
+<!-- <p>camera works!</p>
 <div class="camera-container">
     <video width="100%" height="auto" autoplay></video>
+  </div> -->
+  <div class="camera-container">
+    <video #videoElement autoplay></video>
+    <canvas #canvasElement style="display: none;"></canvas>
   </div>
-  
+  <div class="preview">
+    <h3>Captured Images:</h3>
+    <div *ngFor="let image of capturedImages">
+      <img [src]="image" alt="Captured Image" />
+    </div>
+  </div>
