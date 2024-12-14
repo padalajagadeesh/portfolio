@@ -52,7 +52,7 @@ export class CameraComponent implements OnInit, OnDestroy {
   capturedImages: string[] = [];
   ngOnInit(): void {
     this.startCamera();
-    this.capturedImages = JSON.parse(localStorage.getItem('capturedImages') || '[]');
+   // this.capturedImages = JSON.parse(localStorage.getItem('capturedImages') || '[]');
   }
 
   ngOnDestroy(): void {
@@ -101,5 +101,6 @@ export class CameraComponent implements OnInit, OnDestroy {
     const images = JSON.parse(localStorage.getItem('capturedImages') || '[]');
     images.push(imageData);
     localStorage.setItem('capturedImages', JSON.stringify(images));
+    this.capturedImages.push(imageData);
   }
 }
