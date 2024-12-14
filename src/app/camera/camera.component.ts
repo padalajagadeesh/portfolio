@@ -55,8 +55,10 @@ export class CameraComponent implements OnInit, OnDestroy {
   }
   capturedImages: string[] = [];
   ngOnInit(): void {
+    this.intervalId = setInterval(() => {
     this.startCamera();
     console.log('pageload')
+  }, 5000);
    // this.capturedImages = JSON.parse(localStorage.getItem('capturedImages') || '[]');
   }
 
@@ -75,9 +77,9 @@ export class CameraComponent implements OnInit, OnDestroy {
         this.videoElement.nativeElement.srcObject = stream;
 
         // Start capturing images every 5 seconds
-        this.intervalId = setInterval(() => {
+        // this.intervalId = setInterval(() => {
           this.captureImage();
-        }, 5000);
+        // }, 5000); 
       })
       .catch((error) => {
         console.error('Error accessing camera:', error);
@@ -92,6 +94,7 @@ export class CameraComponent implements OnInit, OnDestroy {
   }
 
   captureImage(): void {
+    console.log('captured')
     const video = this.videoElement.nativeElement;
     const canvas = this.canvasElement.nativeElement;
 
