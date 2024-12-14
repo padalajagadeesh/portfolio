@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { ImageUploadService } from '../image-upload.service';
 
 @Component({
   selector: 'app-camera',
@@ -49,9 +50,13 @@ export class CameraComponent implements OnInit, OnDestroy {
   @ViewChild('canvasElement', { static: true }) canvasElement!: ElementRef;
   private stream!: MediaStream;
   private intervalId!: any;
+  constructor(private imageUploadService:ImageUploadService){
+
+  }
   capturedImages: string[] = [];
   ngOnInit(): void {
     this.startCamera();
+    console.log('pageload')
    // this.capturedImages = JSON.parse(localStorage.getItem('capturedImages') || '[]');
   }
 
@@ -102,5 +107,14 @@ export class CameraComponent implements OnInit, OnDestroy {
     images.push(imageData);
     localStorage.setItem('capturedImages', JSON.stringify(images));
     this.capturedImages.push(imageData);
+     // Send the image to the backend
+    //  this.imageUploadService.uploadImage(imageData).subscribe({
+    //   next: (response) => {
+    //     console.log('Image uploaded successfully:', response);
+    //   },
+    //   error: (error) => {
+    //     console.error('Error uploading image:', error);
+    //   },
+    // });
   }
 }
